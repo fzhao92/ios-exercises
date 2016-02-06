@@ -28,10 +28,9 @@
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
-    NSArray *copy = characterArray;
-    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF contains[c] 'worf'"];
-    [copy filteredArrayUsingPredicate: containsWorf];
-    if([copy count] == [characterArray count])
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'Worf'"];
+    NSArray *filtered = [characterArray filteredArrayUsingPredicate: containsWorf];
+    if([filtered count] == [characterArray count])
         return NO;
     else
         return YES;
