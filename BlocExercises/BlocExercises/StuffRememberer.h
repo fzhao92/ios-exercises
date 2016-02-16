@@ -10,7 +10,7 @@
 
 @interface StuffRememberer : NSObject
 @property(nonatomic, strong) NSMutableArray *arrayRemember;
-@property(nonatomic, copy) NSMutableArray *arrayYouShouldCopy;
+@property(nonatomic, copy) NSMutableArray *arrayCopy;
 @property(assign) CGFloat floatRemember;
 /*
  
